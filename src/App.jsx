@@ -17,11 +17,7 @@ const App = () => {
         featureColor1: "#0b8797",
         featureColor2: "#d0eaed",
     };
-    //const footerDefault = { countyName: "", phoneNumber: "", mail: "" };
-    //const [tema, setTema] = useState(theme);
-    // const [footerInfo, setFooterInfo] = useState(footerDefault);
     const [consents, setConsents] = useState([]);
-    // const [errorText, setErrorText] = useState("");
     const [isFetching, setIsFetching] = useState(false);
     const [basePath, setBasePath] = useState("/");
 
@@ -32,7 +28,7 @@ const App = () => {
         axios.get('api/application/configuration')
             .then(result => {
                 setBasePath(result.data.basePath);
-                axios.get(`${result.data.basePath}/api/consents`)
+                axios.get(`${basePath}/api/consents`)
                     .then(result => {
                         setConsents(result.data)
                     })
