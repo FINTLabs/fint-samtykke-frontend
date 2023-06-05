@@ -17,7 +17,7 @@ function App() {
         featureColor1: "#0b8797",
         featureColor2: "#d0eaed",
     };
-    const [consents, setConsents] = useState([]);
+
     const [isFetching, setIsFetching] = useState(false);
     const [basePath, setBasePath] = useState("/");
 
@@ -30,11 +30,7 @@ function App() {
                 setBasePath(result.data.basePath);
                 axios.defaults.baseURL = result.data.basePath;
 
-                axios.get(`/api/consents`)
-                    .then(result => {
-                        setConsents(result.data)
-                    })
-                    .finally(() => setIsFetching(false));
+
             })
             .catch(reason => {
                 console.log(reason);
@@ -49,8 +45,6 @@ function App() {
             <div className="main">
                 <div className="row">
                     <Consent
-                        consents={consents}
-                        setConsents={setConsents}
                         isFetching={isFetching}
                         setIsFetching={setIsFetching}
                     />
