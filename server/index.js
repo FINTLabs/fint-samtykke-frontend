@@ -25,6 +25,7 @@ app.use(promMid({
 app.use(BASE_PATH + '/', express.static(path.join(`${__dirname}/../`, 'build')));
 
 app.get(`${BASE_PATH}/api/application/configuration`, (req, res) => {
+    log.info("Get application/config")
     res.send({
         basePath: BASE_PATH
     })
