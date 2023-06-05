@@ -8,7 +8,7 @@ import axios from "axios";
 
 const defaultTheme = createTheme();
 
-function App (){
+function App() {
     const theme = {
         ...defaultTheme,
         //logo: "",
@@ -18,25 +18,27 @@ function App (){
         featureColor2: "#d0eaed",
     };
     const [consents, setConsents] = useState([]);
-   // const [isFetching, setIsFetching] = useState(false);
+    const [isFetching, setIsFetching] = useState(false);
     const [basePath, setBasePath] = useState("/");
 
 
     useEffect(() => {
-       // setIsFetching(true);
+        setIsFetching(true);
 
         axios.get('api/application/configuration')
             .then(result => {
                 setBasePath(result.data.basePath);
-                axios.get(`${basePath}/api/consents`)
+                axios.defaults.baseURL = result.data.basePath;
+
+                axios.get(`/api/consents`)
                     .then(result => {
                         setConsents(result.data)
                     })
-                    .catch(reason => {
-                        console.log(reason);
-                        setBasePath('/')
-                    })
-                    // .finally(() => setIsFetching(false));
+                    .finally(() => setIsFetching(false));
+            })
+            .catch(reason => {
+                console.log(reason);
+                setBasePath('/');
             })
 
     }, [basePath]);
@@ -49,8 +51,8 @@ function App (){
                     <Consent
                         consents={consents}
                         setConsents={setConsents}
-                        //isFetching={isFetching}
-                        //setIsFetching={setIsFetching}
+                        isFetching={isFetching}
+                        setIsFetching={setIsFetching}
                     />
                 </div>
             </div>
@@ -58,6 +60,6 @@ function App (){
     </ThemeProvider>
 
 
-};
+}
 
 export default App;
