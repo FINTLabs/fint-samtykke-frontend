@@ -6,6 +6,7 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.10",
     "react-scripts": "^5.0.1"
   },
+  "homepage": ".",
   "proxy": "http://localhost:8080",
   "dependencies": {
     "@material-ui/core": "^4.12.3",

@@ -15,14 +15,11 @@ patches:
       - op: replace
         path: "/spec/env/0/value"
         value: "/beta/rogfk-no"
-    target:
-      kind: Application
-      name: fint-samtykke-frontend
-  - patch: |-
       - op: replace
         path: "/spec/ingress/basePath"
         value: "/beta/rogfk-no"
     target:
       kind: Application
       name: fint-samtykke-frontend
+
 
