@@ -8,7 +8,7 @@ import axios from "axios";
 
 const defaultTheme = createTheme();
 
-const App = () => {
+function App (){
     const theme = {
         ...defaultTheme,
         //logo: "",
@@ -18,12 +18,12 @@ const App = () => {
         featureColor2: "#d0eaed",
     };
     const [consents, setConsents] = useState([]);
-    const [isFetching, setIsFetching] = useState(false);
+   // const [isFetching, setIsFetching] = useState(false);
     const [basePath, setBasePath] = useState("/");
 
 
     useEffect(() => {
-        setIsFetching(true);
+       // setIsFetching(true);
 
         axios.get('api/application/configuration')
             .then(result => {
@@ -32,10 +32,14 @@ const App = () => {
                     .then(result => {
                         setConsents(result.data)
                     })
-                    .finally(() => setIsFetching(false));
+                    .catch(reason => {
+                        console.log(reason);
+                        setBasePath('/')
+                    })
+                    // .finally(() => setIsFetching(false));
             })
 
-    }, [setIsFetching]);
+    }, [basePath]);
 
     return <ThemeProvider theme={theme}>
         <div className="App">
@@ -45,8 +49,8 @@ const App = () => {
                     <Consent
                         consents={consents}
                         setConsents={setConsents}
-                        isFetching={isFetching}
-                        setIsFetching={setIsFetching}
+                        //isFetching={isFetching}
+                        //setIsFetching={setIsFetching}
                     />
                 </div>
             </div>
