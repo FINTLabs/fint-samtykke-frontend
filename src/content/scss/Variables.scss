@@ -1,0 +1,131 @@
+//@import "Mixins";
+
+/* Default variables.
+   If you want to change the variables and theme the site,
+   create a new file and overwrite the variables (do not include !default).
+   Remember to compile the new settings file by including it in Bundled.scss
+   right after the DefaultSettings-file.
+*/
+
+/*Site colors*/
+$white: #fff !default; 
+$black: #333 !default; 
+$dark-grey: #666 !default; 
+$medium-grey: #cdcdcd !default; 
+$light-grey: #e5e5e5 !default; 
+$light-grey: #d7d7d7 !default; 
+
+$background-color: #fff !default; 
+$primary-color: #7a1668 !default; 
+$primary-color-light: #e4d0e1 !default;
+$secondary-color: #513f35 !default; 
+
+$feature-color1: #0b8797 !default; 
+$feature-color2: #d0eaed !default; 
+
+$danger-color: #ff0000 !default;  
+$success-color: #008000 !default;
+$alert-color: #d73b3b !default;
+
+$alert-success: #8bd495 !default; 
+$alert-sucess-border-color: #00a651 !default; 
+$alert-fail: #f5989d !default; 
+$alert-fail-border-color: #ed1c24 !default;
+
+/*Text*/
+$text-color: #333333 !default;
+$text-disabled: $dark-grey !default;
+$placeholder-color: #837067 !default;
+
+$link-color: $secondary-color !default;
+$link-color-hover: $primary-color !default;
+
+/*fonts*/
+$font: 'Roboto', sans-serif !default;
+$font-mono: 'Roboto Mono', monospace !default;
+$font-headers: $font !default;
+
+$fsize-xs: 12px !default; 
+$fsize-sm: 14px !default; 
+$fsize-std: 16px !default; 
+$fsize-md: 20px !default;
+$fsize-ml: 21px !default;
+$fsize-lg: 24px !default; 
+$fsize-xl: 28px !default;
+
+$fweight-thin: 100 !default;
+$fweight-extralight: 200 !default;
+$fweight-light: 300 !default;
+$fweight-normal: 400 !default;
+$fweight-medium: 500 !default;
+$fweight-semibold: 600 !default;
+$fweight-bold: 700 !default;
+$fweight-extrabold: 800 !default;
+$fweight-ultrabold: 900 !default;
+
+/*text*/
+$text-color: $secondary-color !default; 
+$placeholder-color: #837067 !default; 
+
+$uppercase: uppercase !default; /*change this one to none if you do not want caps*/
+$lowercase: lowercase !default;
+
+/*borders*/
+$no-border: none important !default; 
+$border-thin: 1px solid !default; 
+$border-medium: 2px solid !default; 
+$border-thick: 4px solid !default;
+
+/*other*/
+$none: none important !default; 
+
+/*media queries*/
+$min-xl: "only screen and (min-width : 1201px)" !default;
+$max-lg: "only screen and (max-width : 1200px)" !default;
+$max-md: "only screen and (max-width : 992px)" !default;
+$max-sm: "only screen and (max-width : 880px)" !default; //768px
+$max-xs: "only screen and (max-width : 480px)" !default;
+$max-xxs: "only screen and (max-width : 320px)" !default;
+
+$icons-dir: '../images/icons';
+
+/*icons*/
+$icon-pencil-white: url(#{$icons-dir}/pencil-white.png) !default;
+$icon-pencil-brown: url(#{$icons-dir}/pencil-brown.png) !default;
+$icon-ban: url(#{$icons-dir}/ban.png) !default;
+$icon-lock: url(#{$icons-dir}/lock.png) !default;
+$icon-trash: url(#{$icons-dir}/trash.png) !default;
+$icon-calendar: url(#{$icons-dir}/calendar.png) !default;
+$icon-right-arrow-brown: url(#{$icons-dir}/right-arrow-brown.png) !default;
+$icon-right-arrow-green: url(#{$icons-dir}/right-arrow-green.png) !default;
+$icon-left-arrow-brown: url(#{$icons-dir}/left-arrow-brown.png) !default;
+$icon-left-arrow-red: url(#{$icons-dir}/left-arrow-red.png) !default;
+$icon-thumbs-down: url(#{$icons-dir}/thumbs-down.png) !default;
+$icon-thumbs-up: url(#{$icons-dir}/thumbs-up.png) !default;
+$icon-minus-red: url(#{$icons-dir}/minus-red.png) !default;
+$icon-minus-white: url(#{$icons-dir}/minus-white.png) !default;
+$icon-plus-green: url(#{$icons-dir}/plus-green.png) !default;
+$icon-plus-white: url(#{$icons-dir}/plus-white.png) !default;
+$icon-error-brown: url(#{$icons-dir}/error-brown.png) !default;
+$icon-error-red: url(#{$icons-dir}/error-red.png) !default;
+$icon-questionmark: url(#{$icons-dir}/icon-questionmark.svg) !default;
+
+$icon-add: url(#{$icons-dir}/icon-add.svg);
+$icon-add-white: url(#{$icons-dir}/icon-add-white.svg);
+$icon-expand-more: url(#{$icons-dir}/icon-expand-more.svg);
+$icon-watch: url(#{$icons-dir}/icon-watch.svg);
+$icon-calendar: url(#{$icons-dir}/icon-calendar.svg);
+$icon-calendar-hover: url(#{$icons-dir}/icon-calendar-hover.svg);
+$icon-close-mobile-black: url(#{$icons-dir}/icon-close-mobile-black.png);
+$icon-expand-less: url(#{$icons-dir}/icon-expand-less.svg);
+$icon-checkmark: url(#{$icons-dir}/icon-checkmark.svg);
+$icon-remove: url(#{$icons-dir}/icon-remove.svg);
+
+/*logos*/
+$county-logo: url(../images/vigo-logo.png) !default;
+$main-logo: url(../images/portal-logo.png) !default;
+$main-logo-background: $feature-color2 !default;
+$main-logo-foreground: $secondary-color !default;
+
+/* Padding*/
+$padding: 6% !default;

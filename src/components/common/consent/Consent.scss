@@ -1,0 +1,27 @@
+@import '../../../content/scss/Variables.scss';
+@import '../../../content/scss/BaseStyles.scss';
+
+.consent {
+    display: inline-block;
+    font: $fweight-normal $fsize-std $font;
+    float: left;
+    width: 100%;
+
+    .container-fluid {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .row {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+
+        /*div[class^=col] {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }*/
+    }
+    
+}

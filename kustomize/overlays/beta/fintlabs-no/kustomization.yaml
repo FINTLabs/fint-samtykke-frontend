@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: fintlabs-no
+resources:
+  - ../../../base
+commonLabels:
+  app.kubernetes.io/name: vigobas-samtykke-frontend
+  app.kubernetes.io/instance: vigobas-samtykke-frontend_fintlabs-no
+  app.kubernetes.io/version: latest
+  app.kubernetes.io/component: samtykke-frontend
+  app.kubernetes.io/part-of: vigobas
+  fintlabs.no/team: bas
+  fintlabs.no/org-id: fintlabs.no

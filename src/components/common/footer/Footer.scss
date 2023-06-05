@@ -1,0 +1,32 @@
+@import '../../../content/scss/Variables.scss';
+@import '../../../content/scss/BaseStyles.scss';
+
+.footer-bottom__seperator {
+    width: 100%;
+    border: none;
+    height: 1.5px;
+    margin: 0;
+    align-content: center;
+    background-color: $secondary-color;
+  }
+
+  .footer {
+    //border-top: $border-medium $secondary-color;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    clear: both;
+    font: $fweight-normal $fsize-sm $font;
+    padding: 0 0% 50px;
+    text-align: left;
+    transform: translateY(5vh);
+    background-color: white;
+
+    strong {
+        font-weight: $fweight-bold;
+    }
+
+    .footer-info {
+        padding: 15px 0 0;
+    }
+}

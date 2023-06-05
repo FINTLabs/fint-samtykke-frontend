@@ -1,0 +1,25 @@
+apiVersion: fintlabs.no/v1alpha1
+kind: Application
+metadata:
+  name: vigobas-samtykke-frontend
+  namespace: fintlabs-no
+  labels:
+    app.kubernetes.io/name: vigobas-samtykke-frontend
+    app.kubernetes.io/instance: vigobas-samtykke-frontend_fintlabs-no
+    app.kubernetes.io/version: latest
+    app.kubernetes.io/component: samtykke-frontend
+    app.kubernetes.io/part-of: vigobas
+    fintlabs.no/team: bas
+    fintlabs.no/org-id: fintlabs-no
+spec:
+  orgId: fintlabs-no
+  image: fintlabsacr.azurecr.io/vigobas-samtykke-frontend:latest
+  imagePullPolicy: Always
+  port: 8000
+  url:
+    hostname: beta-samtykke.vigoiks.no
+    basePath: /rogfk-no
+  ingress:
+    enabled: true
+    middlewares:
+      - vigobas-samtykke-frontend-sso

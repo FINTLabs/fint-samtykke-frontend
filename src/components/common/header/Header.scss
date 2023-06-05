@@ -1,0 +1,66 @@
+@import '../../../content/scss/Variables.scss';
+@import '../../../content/scss/BaseStyles.scss';
+
+.header {
+     //border-bottom: $border-thick $secondary-color;
+     height: 100px;
+     margin: 20px auto;
+     padding: 0;
+     position: relative;
+     width: 100%;
+     display: inline-block;     
+}
+
+.row {
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+.header {
+    &.row {
+        height: 100%;
+        padding-bottom: 2px;
+        border-bottom: solid $secondary-color 2px;
+    }
+}
+
+.logo{
+    display: table-cell;
+    display: inline-block;
+    height: 100px;
+    width: 50%;
+    
+    &.logo-county {
+        background-image: url('https://stflaiscdn.blob.core.windows.net/media/fint-by-vigo.svg');
+        background-position: 30px left;
+        background-repeat: no-repeat;
+        float: left;
+        width: 336px;
+        height: 100px;
+        @media #{$max-sm} {
+            align-content: center;
+        }
+    }
+    
+     &.logo-portal {
+        background-image: url('../../../content/images/portal-logo.png');
+        background-position: 30px center;
+        background-repeat: no-repeat;
+        float: right;
+        width: 328px;
+        height: 100px;
+        align-content: right;
+        @media #{$max-sm} {
+            display: none;
+        }
+    }
+}
+
+.header-top__seperator {
+    width: 100%;
+    border: none;
+    height: 3.5px;
+    margin: 0;
+    background-color: $secondary-color;
+    align-content: center;
+  }

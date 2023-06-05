@@ -1,0 +1,340 @@
+/*LAYOUT*/
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    //overflow-x: hidden;
+    //always force vertical scrollbar to prevent ui from jumping, ie when we display modal dialogs
+    overflow-y: scroll;
+    background: $background-color;
+}
+
+body {
+    background: $background-color;
+    color: mix($text-color, #000, 50%);
+    font-family: $font;
+    font-size: $fsize-std;
+    margin: 0;
+    padding: 0 $padding;
+
+    // @media #{$max-lg} {
+    //     padding: 0 20px;
+    // }
+}
+
+// @media screen and (max-width: 1024px) {
+//     body {
+//         padding: 0 2%;
+//     }
+// }
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+    display: block;
+}
+
+/*HEADINGS*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-headers;
+    font-weight: $fweight-normal;
+    margin: 0 0 20px !important;
+    padding: 0 !important;
+}
+
+h1 {
+    color: $primary-color;
+    font-weight: 700;
+    font-size: $fsize-lg; //24px
+}
+
+h2 {
+    color: $text-color;
+    font-family: $font-headers !important;
+    font-size: $fsize-ml; //21px
+    font-weight: $fweight-normal !important;
+    text-transform: $uppercase;
+
+    span {
+        font-family: $font-headers !important;
+        font-weight: $fweight-semibold;
+    }
+}
+
+h3 {
+    color: $text-color;
+    font-size: $fsize-std !important; //16px
+    margin: 0 !important;
+    text-transform: $uppercase;
+
+    span {
+        display: inline-block;
+        font-family: $font-headers !important;
+        padding: 8px 0;
+    }
+}
+
+h4 {
+    color: $text-color;
+    font-family: $font-headers !important;
+    font-size: $fsize-sm; //14px
+    margin: 0 !important;
+    text-transform: $uppercase;
+}
+
+/*LINKS*/
+
+a {
+    //border-bottom: $border-thin $link-color !important;
+    //color: $link-color;
+    text-decoration: none !important;
+}
+
+a:hover {
+    //border-bottom: $border-thin $link-color-hover !important;
+    //color: $link-color-hover !important;
+    text-decoration: none !important;
+}
+
+/*text formatting*/
+
+p {
+    color: $text-color;
+}
+
+p span {
+}
+
+p strong {
+    color: $text-color;
+    font: $fweight-normal $fsize-std $font;
+}
+
+strong {
+    color: $text-color;
+    font-family: $font;
+    font-weight: $fweight-bold;
+}
+
+small {
+    color: $text-color;
+    font-family: $font;
+    font-size: $fsize-xs;
+}
+
+i, em {
+    font-family: $font;
+    font-style: italic;
+    font-weight: $fweight-normal;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top: $border-medium $feature-color2;
+}
+
+/*FORM ELEMENTS*/
+
+form {
+    & > * {
+        //-webkit-appearance: none !important;
+    }
+}
+
+label {
+    /*border: 1px solid red;*/
+    color: $text-color;
+    display: block;
+    font: $fweight-bold $fsize-xs $font;
+    margin: 10px 0 3px;
+    //padding: 0 10px 0 0;
+    text-align: left;
+   /* text-transform: $uppercase;*/
+
+    .required {
+        color: $feature-color1;
+        display: inline !important;
+        font: $fweight-bold $fsize-lg $font;
+        height: auto;
+        padding: 0;
+    }
+
+    &.inline {
+        display: inline;
+    }
+
+    i {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+input {
+    border: $border-thin $feature-color1;
+    box-shadow: none !important;
+    color: $text-color;
+    font: $fweight-normal $fsize-std $font;
+    margin: 0;
+    outline: none !important;
+    padding: 0 10px;
+    
+    //-webkit-appearance: none !important;
+    &[type="submit"] {
+    }
+
+    &[type="radio"] {
+        /*border: 1px solid red;
+        height: 50px;
+        width: 50px;*/
+    }
+
+    &[type="file"] {
+        background: $feature-color1;
+        color: $white;
+        height: 50px;
+        line-height: 1em;
+        padding: 20px;
+    }
+
+    &[type="text"]:disabled {
+        border: $border-thin $light-grey !important;
+    }
+
+    &:disabled {
+        background: $light-grey;
+        border: $border-thin $light-grey !important;
+    }
+
+    &:focus {
+        border: $border-thin $primary-color;
+        outline: none !important;
+        outline-color: transparent !important;
+        outline-style: none !important;
+        //-webkit-appearance: none;
+    }
+
+    &[type='number'] {
+        -moz-appearance: textfield;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: $font;
+    font-weight: $fweight-normal;
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+textarea {
+    @extend input;
+}
+
+select {
+    border: $border-thin $feature-color1;
+    color: $secondary-color !important;
+    font: $fweight-normal $fsize-sm $font;
+    margin: 0;
+    height: 36px;
+    line-height: 36px;
+    //padding: 0 10px;
+    width: 100%;
+}
+
+::-webkit-input-placeholder {
+    color: $placeholder-color;
+    font: $fweight-normal $fsize-sm $font;
+    height: 2.5em;
+    line-height: 2.5em;
+    opacity: 1;
+}
+
+:-moz-placeholder { /* older Firefox*/
+    color: $placeholder-color;
+    font: $fweight-normal $fsize-sm $font;
+    height: 2.5em;
+    line-height: 2.5em;
+    opacity: 1;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    color: $placeholder-color;
+    font: $fweight-normal $fsize-sm $font;
+    height: 2.5em;
+    line-height: 2.5em;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: $placeholder-color;
+    font: $fweight-normal $fsize-sm $font;
+    height: 2.5em;
+    line-height: 2.5em;
+    opacity: 1;
+}
+
+
+/*TABLE*/
+
+table {
+    width: 100%;
+
+    th {
+        border: $border-thin transparent;
+        border-bottom: $border-medium rgba($feature-color1, 1) !important;
+        color: $text-color;
+        font: $fweight-bold $fsize-xs $font;
+        padding: 10px 0 !important;
+        text-transform: $uppercase;
+    }
+
+    td {
+        color: mix($text-color, #000, 50%);
+        font: $fweight-normal $fsize-sm $font;
+        padding: 10px 0;
+        vertical-align: middle;
+        width: auto;
+
+        @media #{$max-lg} {
+            font: $fweight-normal $fsize-xs $font;
+        }
+
+        button {
+            font-family: $font;
+            font-weight: $fweight-normal;
+        }
+    }
+
+    .row {
+        margin: 0;
+        padding: 0 !important;
+
+        div[class^="col"] {
+            strong {
+                padding: 0;
+            }
+        }
+    }
+}
+
+dl {
+    font-size: $fsize-sm;
+
+    dt {
+    }
+
+    dd {
+        margin-bottom: 10px;
+    }
+}
