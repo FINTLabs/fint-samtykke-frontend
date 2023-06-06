@@ -29,8 +29,6 @@ function App() {
             .then(result => {
                 setBasePath(result.data.basePath);
                 axios.defaults.baseURL = result.data.basePath;
-
-
             })
             .catch(reason => {
                 console.log(reason);

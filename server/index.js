@@ -7,7 +7,8 @@ const log = log4js.getLogger();
 const promMid = require('express-prometheus-middleware');
 
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8000
+;
 const BASE_PATH = process.env.BASE_PATH || "/";
 log.level = process.env.LOGGING_LEVEL || "info"
 
@@ -25,6 +26,7 @@ app.use(promMid({
 app.use(BASE_PATH + '/', express.static(path.join(`${__dirname}/../`, 'build')));
 
 app.get(`${BASE_PATH}/api/application/configuration`, (req, res) => {
+    console.log("treff 1")
     log.info("Get application/config")
     res.send({
         basePath: BASE_PATH
@@ -41,4 +43,7 @@ app.get(`${BASE_PATH}/*`, (req, res) => {
 });
 
 
-app.listen(PORT, () => log.info(`Application fucking started on http://localhost:${PORT}${BASE_PATH}`));
+app.listen(PORT, () => {
+    console.log("test logggggg")
+    log.info(`Application fucking started on http://localhost:${PORT}${BASE_PATH}`)
+});
