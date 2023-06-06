@@ -71,7 +71,7 @@ const Consent = ({
             .catch(console.log);
     };
     useEffect(() => {
-        axios.get(`/consents`)
+        axios.get(`consents`)
             .then(result => {
                 setConsents(result.data)
             })
