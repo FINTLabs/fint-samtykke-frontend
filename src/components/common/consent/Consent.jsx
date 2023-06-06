@@ -31,7 +31,7 @@ const Consent = ({
     const handleChange = (event, index, consent) => {
         setIsFetching(true);
         fetch(
-            `api/${consent.systemIdValue}/${consent.processing.systemId.identifikatorverdi}/${event.target.checked}`,
+            `/consents/${consent.systemIdValue}/${consent.processing.systemId.identifikatorverdi}/${event.target.checked}`,
             {
                 method: "PUT",
                 headers: {
@@ -53,7 +53,7 @@ const Consent = ({
 
     const createConsent = (index, consent) => {
         setIsFetching(true);
-        fetch(`api/${consent.processing.systemId.identifikatorverdi}`, {
+        fetch(`/consents/${consent.processing.systemId.identifikatorverdi}`, {
             method: "POST",
             headers: {
                 "Content-type": "application/json",
@@ -71,7 +71,7 @@ const Consent = ({
             .catch(console.log);
     };
     useEffect(() => {
-        axios.get(`/api/consents`)
+        axios.get(`/consents`)
             .then(result => {
                 setConsents(result.data)
             })
