@@ -31,7 +31,7 @@ const Consent = ({
     const handleChange = (event, index, consent) => {
         setIsFetching(true);
         fetch(
-            `/consents/${consent.systemIdValue}/${consent.processing.systemId.identifikatorverdi}/${event.target.checked}`,
+            `consents/${consent.systemIdValue}/${consent.processing.systemId.identifikatorverdi}/${event.target.checked}`,
             {
                 method: "PUT",
                 headers: {
@@ -53,7 +53,7 @@ const Consent = ({
 
     const createConsent = (index, consent) => {
         setIsFetching(true);
-        fetch(`/consents/${consent.processing.systemId.identifikatorverdi}`, {
+        fetch(`consents/${consent.processing.systemId.identifikatorverdi}`, {
             method: "POST",
             headers: {
                 "Content-type": "application/json",
