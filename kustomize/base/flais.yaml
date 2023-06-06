@@ -8,6 +8,7 @@ metadata:
     app.kubernetes.io/component: samtykke-frontend
 
 spec:
+  port: 8000
   orgId: rogfk.no
   image: ghcr.io/fintlabs/fint-samtykke-frontend
   imagePullPolicy: Always
