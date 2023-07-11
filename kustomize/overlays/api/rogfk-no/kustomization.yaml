@@ -24,7 +24,7 @@ patches:
   - patch: |-
      - op: replace
        path: "/spec/basePath"
-       value: /rogfk-no
+       value: "/rogfk-no"
     target:
       kind: FLAISSso
       name: fint-samtykke-sso
