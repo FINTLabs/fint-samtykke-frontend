@@ -10,6 +10,9 @@ commonLabels:
 patches:
   - patch: |-
       - op: replace
+        path: "/spec/orgId"
+        value: "trondelagfylke.no"
+      - op: replace
         path: "/spec/url/basePath"
         value: "/trondelagfylke-no"
       - op: replace
@@ -21,6 +24,8 @@ patches:
     target:
       kind: Application
       name: fint-samtykke-frontend
+
+
   - patch: |-
      - op: replace
        path: "/spec/basePath"
@@ -28,6 +33,5 @@ patches:
     target:
       kind: FLAISSso
       name: fint-samtykke-sso
-
 
 

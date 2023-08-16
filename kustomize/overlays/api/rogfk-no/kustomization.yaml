@@ -10,6 +10,9 @@ commonLabels:
 patches:
   - patch: |-
       - op: replace
+        path: "/spec/orgId"
+        value: "rogfk.no"
+      - op: replace
         path: "/spec/url/basePath"
         value: "/rogfk-no"
       - op: replace

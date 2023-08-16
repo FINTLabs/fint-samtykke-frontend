@@ -9,7 +9,7 @@ metadata:
 
 spec:
   port: 8000
-  orgId: rogfk.no
+  orgId: fylke.no
   image: ghcr.io/fintlabs/fint-samtykke-frontend
   imagePullPolicy: Always
   url:
