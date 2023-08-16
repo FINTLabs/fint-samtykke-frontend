@@ -4,7 +4,7 @@ namespace: trondelagfylke-no
 resources:
   - ../../../base
 commonLabels:
-  app.kubernetes.io/instance: fint-samtykke-frontend_trondelagfylke-no
+  app.kubernetes.io/instance: fint-samtykke-frontend_trondelagfylke_no
   fintlabs.no/org-id: trondelagfylke.no
 
 patches:
