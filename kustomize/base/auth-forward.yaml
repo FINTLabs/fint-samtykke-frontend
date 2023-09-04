@@ -5,7 +5,19 @@ metadata:
   labels:
     app.kubernetes.io/component: sso
     app.kubernetes.io/name: fint-samtykke-sso
-    app.kubernetes.io/instance: fint-samtykke-sso_rogfk-no
+    app.kubernetes.io/instance: fint-samtykke-sso_fylke
+    app.kubernetes.io/version: latest
+    app.kubernetes.io/part-of: fint-samtykke
+    fintlabs.no/team: bas
+    fintlabs.no/org-id: fintlabs.no
+
 spec:
   hostname: samtykke.vigoiks.no
-  basePath: /beta/rogfk-no
+  basePath: path
+
+
+
+
+
+
+
