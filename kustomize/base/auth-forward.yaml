@@ -1,7 +1,7 @@
 apiVersion: fintlabs.no/v1alpha1
 kind: FLAISSso
 metadata:
-  name: fint-samtykke-sso
+  name: fint-samtykke-auth-forward-sso
   labels:
     app.kubernetes.io/component: sso
     app.kubernetes.io/name: fint-samtykke-sso

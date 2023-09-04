@@ -31,7 +31,7 @@ patches:
 
     target:
       kind: FLAISSso
-      name: fint-samtykke-sso
+      name: fint-samtykke-auth-forward-sso
 
 
 

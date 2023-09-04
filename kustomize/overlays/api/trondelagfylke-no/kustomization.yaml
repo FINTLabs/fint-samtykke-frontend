@@ -32,6 +32,6 @@ patches:
        value: "/trondelagfylke-no"
     target:
       kind: FLAISSso
-      name: fint-samtykke-sso
+      name: fint-samtykke-auth-forward-sso
 
 
