@@ -21,6 +21,9 @@ patches:
       - op: replace
         path: "/spec/ingress/basePath"
         value: "/trondelagfylke-no"
+      - op: replace
+        path: "/spec/ingress/middlewares"
+        value: "fint-samtykke-auth-forward-sso"
     target:
       kind: Application
       name: fint-samtykke-frontend
