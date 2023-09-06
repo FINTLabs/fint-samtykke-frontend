@@ -22,7 +22,7 @@ patches:
         path: "/spec/ingress/basePath"
         value: "/trondelagfylke-no"
       - op: replace
-        path: "/spec/ingress/middlewares"
+        path: "/spec/ingress/middlewares/0"
         value: "fint-samtykke-auth-forward-sso"
     target:
       kind: Application
