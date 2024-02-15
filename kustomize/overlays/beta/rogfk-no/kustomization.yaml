@@ -10,6 +10,9 @@ commonLabels:
 patches:
   - patch: |-
       - op: replace
+        path: "/spec/orgId"
+        value: "rogfk.no"
+      - op: replace
         path: "/spec/url/basePath"
         value: "/beta/rogfk-no"
       - op: replace
@@ -21,5 +24,13 @@ patches:
     target:
       kind: Application
       name: fint-samtykke-frontend
+  - patch: |-
+      - op: replace
+        path: "/spec/basePath"
+        value: "/beta/rogfk-no"
+
+    target:
+      kind: FLAISSso
+      name: fint-samtykke-auth-forward-sso
 
 

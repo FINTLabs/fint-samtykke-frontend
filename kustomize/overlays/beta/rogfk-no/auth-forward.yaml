@@ -1,7 +1,0 @@
-apiVersion: fintlabs.no/v1alpha1
-kind: FLAISSso
-metadata:
-  name: fint-samtykke-sso
-spec:
-  hostname: samtykke.vigoiks.no
-  basePath: /beta/rogfk-no
