@@ -18,7 +18,7 @@ spec:
   ingress:
     enabled: true
     middlewares:
-      - fint-samtykke-sso
+      - fint-samtykke-auth-forward-sso
   env:
     - name: BASE_PATH
       value: path

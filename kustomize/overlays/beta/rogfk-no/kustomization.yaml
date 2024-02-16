@@ -7,6 +7,9 @@ resources:
 commonLabels:
   app.kubernetes.io/instance: fint-samtykke-frontend_rogfk_no
   fintlabs.no/org-id: rogfk.no
+  app.kubernetes.io/version: latest
+  app.kubernetes.io/part-of: samtykke
+  fintlabs.no/team: bas
 
 patches:
   - patch: |-
