@@ -28,7 +28,6 @@ patches:
       - op: replace
         path: "/spec/basePath"
         value: "/beta/rogfk-no"
-
     target:
       kind: FLAISSso
       name: fint-samtykke-auth-forward-sso
