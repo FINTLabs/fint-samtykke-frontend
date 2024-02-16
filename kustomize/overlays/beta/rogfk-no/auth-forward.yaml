@@ -1,0 +1,23 @@
+apiVersion: fintlabs.no/v1alpha1
+kind: FLAISSso
+metadata:
+  name: fint-samtykke-auth-forward-sso
+  labels:
+    app.kubernetes.io/component: sso
+    app.kubernetes.io/name: fint-samtykke-auth-forward-sso
+    app.kubernetes.io/instance: fint-samtykke-auth-forward-sso_fylke
+    app.kubernetes.io/version: latest
+    app.kubernetes.io/part-of: fint-samtykke
+    fintlabs.no/team: bas
+    fintlabs.no/org-id: fintlabs.no
+
+spec:
+  hostname: samtykke.vigoiks.no
+  basePath: path
+
+
+
+
+
+
+
