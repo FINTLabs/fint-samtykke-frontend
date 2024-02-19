@@ -5,11 +5,11 @@ metadata:
   labels:
     app.kubernetes.io/component: sso
     app.kubernetes.io/name: fint-samtykke-auth-forward-sso
-    app.kubernetes.io/instance: fint-samtykke-auth-forward-sso_fylke
+    app.kubernetes.io/instance: fint-samtykke-auth-forward-sso_rogfk-no
     app.kubernetes.io/version: latest
     app.kubernetes.io/part-of: fint-samtykke
     fintlabs.no/team: bas
-    fintlabs.no/org-id: fintlabs.no
+    fintlabs.no/org-id: rogfk.no
 
 spec:
   hostname: samtykke.vigoiks.no
