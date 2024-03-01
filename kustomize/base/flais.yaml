@@ -7,6 +7,7 @@ metadata:
     app.kubernetes.io/name: fint-samtykke-frontend
     app.kubernetes.io/component: samtykke-frontend
 
+
 spec:
   port: 8000
   orgId: fylke.no
@@ -18,7 +19,7 @@ spec:
   ingress:
     enabled: true
     middlewares:
-      - fint-samtykke-sso
+      - fint-samtykke-auth-forward-sso
   env:
     - name: BASE_PATH
       value: path
