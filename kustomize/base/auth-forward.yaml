@@ -4,7 +4,7 @@ metadata:
   name: fint-samtykke-auth-forward-sso
   labels:
     app.kubernetes.io/component: sso
-    app.kubernetes.io/name: fint-samtykke-sso
+    app.kubernetes.io/name: fint-samtykke-auth-forward-sso
     app.kubernetes.io/instance: fint-samtykke-sso_fylke
     app.kubernetes.io/version: latest
     app.kubernetes.io/part-of: fint-samtykke
